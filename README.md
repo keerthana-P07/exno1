@@ -48,16 +48,16 @@ ir = pd.read_csv("iris.csv")
 ir
 ir.describe()
 
-# ------------------- BOXPLOT BEFORE OUTLIER REMOVAL -------------------
+
 sns.boxplot(x='sepal_width', data=ir)
 plt.title("Boxplot Before Removing Outliers")
 plt.show()
 
-# ------------------- SCATTER PLOT BEFORE CLEANING -------------------
+
 ir.plot.scatter(x='sepal_length', y='sepal_width', title="Before Removing Outliers")
 plt.show()
 
-# ------------------- IQR METHOD -------------------
+
 Q1 = ir.sepal_width.quantile(0.25)
 Q3 = ir.sepal_width.quantile(0.75)
 IQR = Q3 - Q1
